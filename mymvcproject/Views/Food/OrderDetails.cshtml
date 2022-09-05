@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "OrderDetails";
+}
+
+<h1>Order Details</h1>
+<p>
+    Name:@ViewBag.Name
+</p>
+<p>
+    Contact Number:@ViewBag.Contact;
+</p>
+<p>
+    Payment:@ViewBag.Payment
+</p>
+<div>
+    <ul>
+        @foreach(var item in ViewBag.Orders)
+        {
+            <li>
+                @item
+            </li>
+        }
+    </ul>
+</div>
+<p>
+    Your Option:@ViewBag.Option
+</p>
+
+
+

@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h3>@ViewBag.Message</h3>
+
+@*<h3> 
+    @ViewData["message"]
+ </h3>
+ <p>
+     @ViewData["Experience"] <small>@ViewData["year"]</small>
+ </p>*@
+
+ <ol>
+     @foreach(string color in (IEnumerable<string>) ViewData["list"])
+    {
+        <li>
+            @color
+        </li>
+    }
+</ol>
+
+<ul>
+    @foreach(var item in ViewBag.ColorList)
+    {
+        <li>
+            @item
+        </li>
+    }
+</ul>
+
+ 

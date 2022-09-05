@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = "OrderFood";
+}
+
+<h1>Order Food</h1>
+@using(Html.BeginForm()){
+
+    <table class="table">
+        <tr>
+            <td>
+                @Html.Label("Enter full name")
+            </td>
+            <td>
+                @Html.TextBox("fname")
+                @*<input type="text" id="fname" name="fname"/>*@
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Enter Contact")
+            </td>
+            <td>
+                @Html.TextBox("contact")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Select Payment")
+            </td>
+            <td>
+                @Html.RadioButton("payment","Online") Online
+                @Html.RadioButton("payment","Offline") Offline
+
+               @* <input type="radio" name="gender" value="Male"/> Male
+                <input type="radio" name="gender" value="Female"/> Female*@
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label("Select Orders")
+            </td>
+            <td>
+              @*  @Html.CheckBox("hobies","Sports") Sports*@
+               <input type="checkbox" name="orders" value="Idaly"/> Idaly
+               <input type="checkbox" name="orders" value="Dosa"/> Dosa
+               <input type="checkbox" name="orders" value="Vadapav"/> Vadapav
+               <input type="checkbox" name="orders" value="Pavbhaji"/> Pavbhaji
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Select Option</label>
+            </td>
+            <td>
+                @Html.DropDownList("options")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Save"/>
+            </td>
+        </tr>
+    </table>
+
+}
+
+
+
+
+
